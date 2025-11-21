@@ -29,6 +29,15 @@ import androidx.navigation.NavController
 import com.pablocarrillo.halloweenapp.R
 import kotlinx.coroutines.launch
 
+/**
+ * La pantalla del menú principal de la aplicación.
+ *
+ * Este Composable muestra una cuadrícula de 2x2 con tarjetas ([MenuCard]) que permiten
+ * navegar a las diferentes secciones de la aplicación: Tareas, Galería, Vídeos y Juego.
+ *
+ * @param navController El controlador de navegación para gestionar los eventos de clic
+ * y navegar a la pantalla seleccionada.
+ */
 @Composable
 fun MenuView(navController: NavController) {
 
@@ -115,6 +124,17 @@ fun MenuView(navController: NavController) {
     }
 }
 
+/**
+ * Representa una tarjeta individual en el menú principal.
+ *
+ * Este Composable muestra una imagen con una etiqueta debajo. Al hacer clic, ejecuta
+ * una animación de escala y llama a la función [onClick] proporcionada para
+ * gestionar la navegación.
+ *
+ * @param image El ID del recurso de la imagen que se mostrará en la tarjeta.
+ * @param label El texto que se mostrará debajo de la imagen.
+ * @param onClick La función de callback que se ejecuta cuando se hace clic en la tarjeta.
+ */
 @Composable
 fun MenuCard(image: Int, label: String, onClick: () -> Unit) {
 

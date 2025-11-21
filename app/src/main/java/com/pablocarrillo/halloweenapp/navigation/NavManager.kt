@@ -10,6 +10,16 @@ import com.pablocarrillo.halloweenapp.views.galeria.GaleriaView
 import com.pablocarrillo.halloweenapp.views.videos.MichaelView
 import com.pablocarrillo.halloweenapp.views.juego.JuegoView
 
+/**
+ * Gestiona la navegación de la aplicación.
+ *
+ * Este Composable se encarga de configurar el grafo de navegación utilizando [NavHost].
+ * Define todas las rutas (pantallas) de la aplicación y el Composable que se debe
+ * mostrar para cada una.
+ *
+ * @param navController El controlador de navegación que gestiona el estado de la pila de
+ * navegación. Se utiliza para navegar entre las diferentes pantallas.
+ */
 @Composable
 fun NavManager(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "menu") {

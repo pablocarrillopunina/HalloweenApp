@@ -16,6 +16,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * Muestra una lista de botones para ver videos de Michael Jackson en YouTube.
+ *
+ * Este Composable presenta una pantalla con un título y varios botones, cada uno
+ * asociado a un video musical de Michael Jackson. Al hacer clic en un botón,
+ * se abre la aplicación de YouTube para reproducir el video correspondiente.
+ */
 @Composable
 fun MichaelView() {
 
@@ -59,6 +66,15 @@ fun MichaelView() {
     }
 }
 
+/**
+ * Un botón reutilizable para mostrar en la pantalla de videos.
+ *
+ * Este Composable crea un botón con un texto específico. Al hacer clic en él,
+ * se ejecuta la acción [onClick] proporcionada.
+ *
+ * @param texto El texto que se mostrará en el botón.
+ * @param onClick La función de callback que se ejecuta cuando se hace clic en el botón.
+ */
 @Composable
 fun VideoButton(texto: String, onClick: () -> Unit) {
     Button(

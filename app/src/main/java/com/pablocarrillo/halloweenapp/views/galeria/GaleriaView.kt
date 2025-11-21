@@ -17,6 +17,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.pablocarrillo.halloweenapp.R
 
+/**
+ * Muestra una galería de imágenes con temática de Halloween.
+ *
+ * Este Composable presenta una lista de imágenes en una cuadrícula vertical ([LazyVerticalGrid]).
+ * Las imágenes se cargan desde los recursos de la aplicación y se muestran con una
+ * relación de aspecto de 1:1 para mantener la coherencia visual.
+ * El fondo de la pantalla tiene un degradado vertical.
+ */
 @Composable
 fun GaleriaView() {
 

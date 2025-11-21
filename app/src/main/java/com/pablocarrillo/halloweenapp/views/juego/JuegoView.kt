@@ -23,6 +23,14 @@ import androidx.compose.ui.unit.sp
 import com.pablocarrillo.halloweenapp.R
 import kotlin.random.Random
 
+/**
+ * La pantalla principal del juego de Halloween.
+ *
+ * Este Composable gestiona el estado del juego, incluyendo la puntuación y si el juego
+ * ha terminado. Muestra una cuadrícula de 2x2 con imágenes. El jugador debe hacer
+ * clic en las imágenes "buenas" para ganar puntos. Si se hace clic en una imagen
+ * "mala", el juego termina y se muestra una pantalla de "Game Over".
+ */
 @Composable
 fun JuegoView() {
 
@@ -149,7 +157,18 @@ fun JuegoView() {
     }
 }
 
-// GENERAR LISTA ALEATORIA DE IMÁGENES
+/**
+ * Genera una lista aleatoria de imágenes para el juego.
+ *
+ * Esta función toma una lista de imágenes "buenas" y "malas", y devuelve una lista
+ * desordenada que contiene dos imágenes de cada tipo. Cada elemento de la lista
+ * es un par que contiene el ID del recurso de la imagen y un booleano que indica
+ * si la imagen es "buena" (true) o "mala" (false).
+ *
+ * @param good La lista de IDs de recursos de imágenes "buenas".
+ * @param bad La lista de IDs de recursos de imágenes "malas".
+ * @return Una lista de 4 pares (Int, Boolean) desordenada.
+ */
 fun generateRandomImages(good: List<Int>, bad: List<Int>): List<Pair<Int, Boolean>> {
     val result = mutableListOf<Pair<Int, Boolean>>()
 
@@ -162,6 +181,18 @@ fun generateRandomImages(good: List<Int>, bad: List<Int>): List<Pair<Int, Boolea
     return result.shuffled()
 }
 
+/**
+ * Representa un único elemento de imagen en la cuadrícula del juego.
+ *
+ * Este Composable muestra una imagen y gestiona los eventos de clic. Cuando se hace
+ * clic en la imagen, se ejecuta una animación de desvanecimiento y se llama a la
+ * función de callback [onGood] o [onBad] dependiendo de si la imagen es "buena" o "mala".
+ *
+ * @param image Un par que contiene el ID del recurso de la imagen y un booleano que
+ * indica si es "buena" (true) o "mala" (false).
+ * @param onGood La función de callback que se ejecuta cuando se hace clic en una imagen "buena".
+ * @param onBad La función de callback que se ejecuta cuando se hace clic en una imagen "mala".
+ */
 @Composable
 fun JuegoItem(image: Pair<Int, Boolean>, onGood: () -> Unit, onBad: () -> Unit) {
 

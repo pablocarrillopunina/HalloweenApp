@@ -18,6 +18,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.pablocarrillo.halloweenapp.R
 
+/**
+ * Muestra una lista de "misiones de supervivencia" con temática de Halloween.
+ *
+ * Este Composable presenta una lista de tareas que el usuario puede realizar.
+ * Permite al usuario añadir nuevas misiones a la lista y eliminarlas.
+ * También incluye un "Modo Extremo" que, al activarse, añade un conjunto de
+ * misiones más desafiantes a la lista. Las misiones extremas se destacan
+ * con un color de fondo diferente.
+ */
 @Composable
 fun TareasView() {
 
