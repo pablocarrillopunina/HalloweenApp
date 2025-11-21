@@ -1,0 +1,37 @@
+# Created by Gemini
+# Gradle files
+.gradle/
+build/
+
+# Local configuration files
+local.properties
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keystore files
+*.jks
+*.keystore
+
+# NDK files
+.cxx/
+.externalNativeBuild/
+*~
+*.swp
+.DS_Store
+/captures
+*.hprof
+.idea/assetWizardSettings.xml
+.idea/caches
+.idea/gradle.xml
+.idea/libraries
+.idea/migrations.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/runConfigurations.xml
+.idea/vcs.xml
+.idea/workspace.xml
