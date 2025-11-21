@@ -59,6 +59,6 @@ Distribuido bajo la Licencia MIT. Consulta `LICENSE` para más información.
 
 ## Contacto
 
-Pablo Carrillo - pablocarrillopunina@example.com
+Pablo Carrillo - pablocarrillopunina@gmail.com
 
 Enlace del Proyecto: [https://github.com/pablocarrillopunina/HalloweenApp](https://github.com/pablocarrillopunina/HalloweenApp)
